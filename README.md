@@ -8,7 +8,7 @@ A CS 410 information retrieval project at the University of Illinois Urbana-Cham
 
 Source research and planning are in progress. The repository includes source and section inventories, source-review documentation, and evaluation templates.
 
-Text collection, passage preparation, retrieval, interface development, and evaluation are planned next steps.
+The Streamlit interface runs with two labeled examples. Live search and evaluation depend on the collected passages and the TF-IDF and BM25 implementations.
 
 ## Goal
 
@@ -55,16 +55,21 @@ Responsibilities remain tentative until the team confirms them.
 | --- | --- |
 | `docs/` | Proposal, source review, project plans, decisions, and report template |
 | `data/` | Source and section inventories, plus collection guidance |
-| `src/illiniinfo/` | Reserved for application code |
+| `src/illiniinfo/` | Streamlit application and retrieval adapter |
 | `evaluation/` | Question, judgment, and results templates |
-| `tests/` | Reserved for tests |
+| `tests/` | Streamlit interface tests |
 | `reports/` | Reserved for experiment reports and presentation links |
 
 ## Running the project
 
-There is no run command yet. Python 3.12 is the proposed development baseline.
+From the repository root, run these commands in a Python 3.12 virtual environment.
 
-We will add dependencies, installation steps, and run instructions with the first implementation.
+```bash
+python -m pip install -r requirements-ui.txt
+python -m streamlit run src/illiniinfo/app.py
+```
+
+Open the local URL printed by Streamlit. The preview works before a passage index is available. See the [interface and retrieval handoff](src/illiniinfo/README.md) for the proposed search function and result fields. To run the [interface tests](tests/README.md), use `python -m unittest discover -s tests`.
 
 ## Submission links
 
