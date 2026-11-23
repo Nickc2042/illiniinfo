@@ -1,19 +1,27 @@
 # Data area
 
-No sources have been selected or downloaded yet. `source_manifest.csv` is a header-only inventory template.
+This folder contains source planning files for IlliniInfo.
 
-## Inventory fields
+## Files
 
-| Field | Purpose |
+| File | Purpose |
 | --- | --- |
-| document_id | Stable ID for a source document |
-| title | Official page title |
-| source_url | Official public URL |
-| catalog_year | Applicable year, or explicit `unknown`; do not infer it from retrieval date |
-| retrieved_at | Actual collection timestamp in ISO 8601 format; leave blank until fetched |
-| inclusion_reason | Why this source belongs in the agreed scope |
-| notes | Program, relevant sections, or collection notes |
+| [nick_source_manifest.csv](nick_source_manifest.csv) | Records official sources, source IDs, URLs, selection reasons, catalog information, and review status |
+| [nick_section_inventory.csv](nick_section_inventory.csv) | Lists selected sections and course entries using two columns: source and section |
 
-Future downloaded pages belong in `raw/`, cleaned documents in `processed/`, passages in `passages/`, and indexes in `indexes/`. These generated directories are ignored by Git. Add the collection and reproduction instructions when implemented.
+## Collection status
 
-Use official public pages only. Preserve URL, headings, and year context when creating passages. Keep selected inventory metadata small enough to review in Git.
+Source research and review have started. Text collection is still pending.
+
+## Next steps
+
+We will collect verified source text in our shared dataset. Each entry will include:
+
+- Source ID
+- Source URL
+- Catalog year
+- Collection date
+
+We will preserve headings, tables, footnotes, and relevant exceptions during collection and preprocessing.
+
+we will use official public sources and keep different degree programs and catalog editions separate.
