@@ -37,7 +37,7 @@ I recorded source links in data/nick_source_manifest.csv and collection targets 
 
 Additional sources
 
-The Student Code page showed a verification screen. I still need to review its credit and residence policy.
+I accessed the Student Code policy text. I still need to verify its edition and effective date before adding the relevant undergraduate section to the collection.
 
 I will add physics information or Technical GPA guidance if our question topics require those sources.
 
