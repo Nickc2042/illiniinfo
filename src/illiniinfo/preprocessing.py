@@ -19,3 +19,23 @@ def splitPassages(text,maxWords=150):# for now, it preservers more so the words 
         passages.append(" ".join(chunk))
 
     return passages
+
+
+def preProcessDoc(doc, maxWords=150):
+    passages = [] # to store and return
+    chunk = splitPassages(doc["text"],maxWords) # idea is to splut a doc's texts into a chunk that can be searched
+
+    for i, chunk in enumerate(chunk):
+        passage = {
+            "passage_id": f"{doc['document_id']}-p{(i+1):03d}", # :03d so each passage num is like a course num 000
+            "document_id": doc["document_id"],
+            "title": doc["title"],
+            "heading": doc.get("heading", ""),
+            "text": chunk,
+            "source_url": doc["source_url"],
+            "catalog_year": doc.get("catalog_year")
+        }
+        passages.append(passage)
+
+    return passages
+
