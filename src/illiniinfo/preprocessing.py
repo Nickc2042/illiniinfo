@@ -9,4 +9,13 @@ def cleanText(text):
     return text.strip() # finally remove whitespace from beginning and the end
 
 
+def splitPassages(text,maxWords=150):# for now, it preservers more so the words but not paragraphs
+    passages = [] # to store later to return
+    text = cleanText(text) # use cleanText()^ to clean it before working with it
+    words = text.split() # split text into individual words
+    
+    for i in range(0,len(words), maxWords): # div the text inot chunks of maxWords
+        chunk = words[i:(i+maxWords)]
+        passages.append(" ".join(chunk))
 
+    return passages
