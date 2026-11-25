@@ -2,7 +2,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from illiniinfo.retrieving import buildIndexes, search
+from illiniinfo.retrieval import buildIndexes, search
 
 class TestRetrieval(unittest.TestCase):
 
